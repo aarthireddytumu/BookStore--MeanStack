@@ -1,0 +1,21 @@
+<div class="container" style="width:400px;">
+    <p>We would like to hear on how you like/dislike book...</p>
+    <form #reviewForm="ngForm" class="form-group" (ngSubmit)="submitForm(reviewForm.value)">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" #title=ngModel minlength="3" required ngModel />
+        <div *ngIf="title.errors && (title.dirty || title.touched)" style="color:red">
+            <div [hidden]="!title.errors.required">
+            Title cannot be Blank
+            </div>
+            <div [hidden]="!title.errors.minlength">
+            Minimum Length is 3 Characters
+            </div>
+        </div>
+        <label>Comments</label>
+        <textarea class="form-control" name="text" ngModel></textarea>
+        <label>Rating: </label>
+        <input type="number" class="form-control" name="rating" ngModel/>
+        <br/>
+        <input type="submit">
+    </form>
+</div>

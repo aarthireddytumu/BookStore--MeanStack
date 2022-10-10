@@ -1,0 +1,12 @@
+<div class="container" style="width: 400px;">
+<form class="form-group" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+    <label>Username</label>
+    <input type="text" class="form-control" formControlName="username" />
+    <p style="color:blue">{{loginForm.value.username}}</p>
+    <p *ngIf="loginForm.controls['username'].hasError('required')" style="color:red">Username cannot be Blank</p>
+    <p *ngIf="loginForm.controls['username'].hasError('minlength')" style="color:red">Username should be min 3 characters</p>
+    <label>Password : </label>
+    <input type="password" class="form-control" formControlName="password" />
+    <input type="submit"/>
+</form>
+</div>

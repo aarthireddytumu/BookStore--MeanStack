@@ -1,0 +1,15 @@
+<div id="di" *ngFor="let book of books">
+    <img [src]="book.thumbnailUrl" alt="book" width="100px" height="100px" >
+        <p>Title : {{book.title}}</p>
+        <p>Authors: {{book.authors}}</p>
+        <p>isbn: {{book.isbn}}</p>
+</div>
+<h3>Reviews:</h3>
+<div id="di2" *ngFor="let rev of review">
+    <hr/>
+    <p>Created on: {{rev.created|date}}</p>
+    <p>Title: {{rev.title}}</p>
+    <p>Comments: {{rev.text}}</p>
+    <p>Rating: {{rev.rating}}</p>
+    <button (click)="deleteCmnt(rev)">Delete</button>
+</div>

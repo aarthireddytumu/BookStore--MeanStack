@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+    <thead>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>City</th>
+        <th>Website</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let author of authors">
+            <td>{{author.username}}</td>
+            <td>{{author.email}}</td>
+            <td>{{author.phone}}</td>
+            <td>{{author.address.city}}</td>
+            <td>{{author.website}}</td>
+        </tr>
+    </tbody>
+</table>

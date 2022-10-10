@@ -1,0 +1,16 @@
+header{
+    background-color: bisque;
+    color: black;
+}
+h1{
+    display: inline;
+    vertical-align: top;
+}
+div{
+    display: inline-block;
+    padding : 5px;
+}
+footer{
+    background-color: bisque;
+    color:blue;
+}
